@@ -5,6 +5,40 @@
 [![org-roam](https://img.shields.io/badge/org--roam-2.0+-green.svg)](https://www.orgroam.com/)
 
 Automatic folgezettel (Luhmann-style) bidirectional link generation for [org-roam](https://www.orgroam.com/).
+This package uses the folgezettel index to determine the parent-child relationship and uses that relationship to create the directional links automatically.
+The index is placed before the title of the note and is compatible with the org-roam file naming system.
+
+## What problems are addressed by this plugin?
+
+### True automation of bidirectional linking
+Electronic zettelkastens rely on reciprocal hyperlinks to relate parent and child notes. 
+The manual insertion of these links is error-prone and time-consuming. 
+This package provides true automation for creating these links by leveraging the parent-child relationship defined in the indexing system. 
+You do not need to click a button to add the links; they are added automatically.
+
+## Support for export to a paper-based zettelkasten
+The folgezettel index determines the order in which a new note is to be placed in a series on notes in a paper-based zettelkasten.
+The ability to print these indices with the notes provides a bridge between electronic and paper-based zettelkastens.
+This bridge supports hybrid approaches, mirror approaches, and project-based approaches.
+In the project-based approach, the notes on paper are used during the assembly of manuscripts where the notes are ordered and rearranged on a physical tabletop or corkboard.
+
+Most electronic zettelkastens rely either on timestamps or a database ID to identify each unique note. 
+This approach is hopeless if one wants to print out their zettels to store them in a paper-based zettelkasten. 
+Fans of the paper-based approach may object that you should write these notes by hand to better integrate the information into your memory. 
+This may be true, but more frequent perusal of the paper zettelkasten may be compensatory and possibly more effective in the long term. 
+Often, there is just not enough time available to rewrite the notes by hand.
+
+There is no rule against mixing handwritten and printed notes together. The inclusion of the folgezettel index in the title tells the user where to store the note. Paper-based zettelkastens rely on the folgezettel index (also called the Luhmann-style index or the Scott Scheper index) to specify the linear order of note storage. There is a one-to-one mapping between the zettelkasten graph and the order in which the notes are stored.
+
+This approach supports a hybrid zettelkasten, with part electronic and part paper-based. Of course, it also supports a mirrored zettelkasten in both paper and electronic form.
+
+You can print a note on US letter-size paper, fold it in half with the title on the outside, and store it in this zettelkasten. This folded paper corresponds to A5-sized paper. Luhmann used the smaller A6-sized paper.
+
+If the note spans multiple pages, as may be the case with a structure note, keyword note, structure note, or hub note, you can fold the pages in half together. You can also save paper and space by printing on both sides, resulting in a booklet with two pages per side. For example, an eight-page note would span both sides of two sheets of US letter paper. The text will be rotated by 90°, so you will need to write the index across the top of the outside side of the folded paper. I favor this approach over index cards because it provides more space and because US Letter printer paper is cheaper and more readily available. This more practical approach reduces the friction of adding new notes to your paper-based zettelkasten.
+
+Obsidian offers a fantastic, infinite canvas for displaying and organizing notes in all kinds of configurations. The ability to print out the notes opens up the opportunity to work with paper versions on a large tabletop or a corkboard. Sometimes changing the context from an electronic format to a physical format can stimulate the mind. This alternative physical approach to arranging notes is useful when using the notes in assembling a manuscript. You can use the canvas to combine all the notes you want to print. This could be useful for one-off tasks, such as assembling a manuscript, where you may discard the paper notes when you are done.
+
+
 
 ## Table of Contents
 
@@ -24,7 +58,8 @@ Automatic folgezettel (Luhmann-style) bidirectional link generation for [org-roa
 
 ## Overview
 
-Folgezettel Org-Roam brings Niklas Luhmann's folgezettel (follow-up slip) numbering system to org-roam. When you create a note with a folgezettel address in its title (e.g., "1.2a My Topic"), the package automatically:
+Folgezettel Org-Roam brings Niklas Luhmann's folgezettel (follow-up slip) numbering system to org-roam. 
+When you create a note with a folgezettel address in its title (e.g., "1.2a My Topic"), the package automatically:
 
 1. Identifies the parent note based on the address hierarchy
 2. Inserts a backlink to the parent in the new note
@@ -418,10 +453,25 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## Acknowledgments
 
-- Niklas Luhmann for the Zettelkasten method
-- The [org-roam](https://www.orgroam.com/) team for their excellent package
-- The Emacs community for continuous inspiration
+- Niklas Luhmann for the Zettelkasten method.
+- The [org-roam](https://www.orgroam.com/) team for their excellent package.
+- The Emacs community for continuous inspiration.
 
----
+
+## Status
+
+It works!
+
+## Update history
+
+|Version      | Changes                                                                                                                                   | Date              |
+|:-----------|:------------------------------------------------------------------------------------------------------------------------------------------|:--------------------|
+| Version 0.1 |  Initi commitExtensive edits of the README.md.                                                                                           | 2026 January 31    |
+
+
+## Funding
+- NIH: R01 CA242845, R01 AI088011
+- NIH: P30 CA225520 (PI: R. Mannel); P30GM145423 (PI: A. West)
+
 
 **Questions?** Open an issue on [GitHub](https://github.com/MooersLab/folgezettel-org-roam/issues).
